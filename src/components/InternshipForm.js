@@ -113,13 +113,13 @@ export default function InternshipForm() {
       if (fileBlob) {
         const formDataUpload = new FormData();
         formDataUpload.append('file', fileBlob, 'proof.pdf');
-        const res = await axios.post('${process.env.REACT_APP_BACKEND_URL}/upload', formDataUpload, {
+        const res = await axios.post('process.env.REACT_APP_BACKEND_URL/upload', formDataUpload, {
           headers: { 'Content-Type': 'multipart/form-data' }
         });
         finalData.file_url = res.data.fileUrl;
       }
 
-      await axios.post('${process.env.REACT_APP_BACKEND_URL}/submitData', finalData);
+      await axios.post('process.env.REACT_APP_BACKEND_URL/submitData', finalData);
       alert("Internship data submitted successfully!");
       setFormData(initialState);
       setFileOption('');

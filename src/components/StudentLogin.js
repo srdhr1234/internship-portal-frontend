@@ -11,7 +11,7 @@ export default function StudentLogin() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post('${process.env.REACT_APP_BACKEND_URL}/loginStudent', { email, sap_id: sapId });
+      const res = await axios.post('process.env.REACT_APP_BACKEND_URL/loginStudent', { email, sap_id: sapId });
       localStorage.setItem('studentProfile', JSON.stringify(res.data));
       showToast('Student Login Successful!');
       navigate('/student');

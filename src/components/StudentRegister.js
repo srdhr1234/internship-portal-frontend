@@ -42,7 +42,7 @@ export default function StudentRegister() {
         photo_url: photoUrl
       };
 
-      await axios.post('${process.env.REACT_APP_BACKEND_URL}/registerStudent', profileData);
+      await axios.post('process.env.REACT_APP_BACKEND_URL/registerStudent', profileData);
       alert('Student profile registered successfully!');
       setFormData({
         email: '',

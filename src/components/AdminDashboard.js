@@ -29,7 +29,7 @@ export default function AdminDashboard() {
   const dashboardRef = useRef();
 
   useEffect(() => {
-    axios.get('${process.env.REACT_APP_BACKEND_URL}/api/all-internships')
+    axios.get('process.env.REACT_APP_BACKEND_URL/api/all-internships')
       .then(res => {
         setData(res.data);
         setFilteredData(res.data);
