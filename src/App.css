@@ -36,3 +36,114 @@
     transform: rotate(360deg);
   }
 }
+
+/* index.css or App.css */
+.chart-card {
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+
+/* General body padding */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card shadows */
+.card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Chart containers for equal spacing */
+.card .p-3 {
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navbar styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn-outline-primary,
+.btn-outline-success {
+  border-radius: 25px;
+}
+
+/* Table */
+.table th,
+.table td {
+  vertical-align: middle !important;
+  font-size: 0.95rem;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Pagination buttons */
+.btn-sm {
+  border-radius: 20px;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+}
+
+/* Toastify overrides */
+.Toastify__toast {
+  border-radius: 10px !important;
+  font-size: 0.95rem !important;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .navbar-brand {
+      font-size: 1.3rem;
+  }
+
+  .card .p-3 {
+      height: auto;
+  }
+
+  .btn {
+      font-size: 0.85rem;
+  }
+}
+
+
+/* index.css or App.css */
+body {
+  background-color: var(--bg-color, #ffffff);
+  color: var(--text-color, #000000);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode (default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* Optional: Navbar override in dark mode */
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
